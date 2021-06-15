@@ -1,0 +1,5 @@
+*.swp
+.cache
+dist
+node_modules
+public/img
