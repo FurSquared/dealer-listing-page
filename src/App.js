@@ -25,19 +25,14 @@ import data from './data';
 
 
 const dealersAlpha = data.slice();
-dealersAlpha.sort((a, b) => a.display_name.localeCompare(b.display_name));
+dealersAlpha.sort((a, b) => a.display_name.toLowerCase().localeCompare(b.display_name.toLowerCase()));
 const dealersAlphaReverse = dealersAlpha.slice();
 dealersAlphaReverse.reverse();
 
 const fuseOptions = {
-  keys: ['image_name','display_name'],
+  keys: ['display_name'],
 };
 const fuse = new Fuse(data, fuseOptions);
-
-/**
- * TODO:
- * - Icon/button for shuffle
- */
 
 function Copyright() {
   return (
