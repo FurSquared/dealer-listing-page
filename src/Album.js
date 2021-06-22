@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   cardMedia: {
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '50%', // 16:9
   },
   cardContent: {
     flexGrow: 1,
@@ -37,7 +37,7 @@ export default function Album({cards}) {
   const classes = useStyles();
 
   return (
-    <Container className={classes.cardGrid} maxWidth="md">
+    <Container className={classes.cardGrid} maxWidth="xl">
       <Grid container spacing={4}>
         {cards.map((card) => (
           <Grid item key={card.display_name} xs={12} sm={6} md={4}>
