@@ -8,7 +8,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "make-data": "node scripts/make-data.js"
+    "make-data": "node scripts/make-data.js",
+    "make-images": "magick mogrify -format jpg -crop 2048x1024+0+0 -resize 600x300 -path ./tmp/out/ ./tmp/*.*"
   },
   "keywords": [],
   "author": "Draggor",
