@@ -24,9 +24,12 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
+    '&:hover': {
+      backgroundColor: theme.palette.action.hover,
+    },
   },
   cardMedia: {
-    paddingTop: '50%', // 16:9
+    paddingTop: '50%',
   },
   cardContent: {
     flexGrow: 1,
@@ -41,6 +44,7 @@ export default function Album({cards}) {
       <Grid container spacing={4}>
         {cards.map((card) => (
           <Grid item key={card.display_name} xs={12} sm={6} md={4}>
+            <Link href={card.website_link}>
             <Card className={classes.card}>
               <CardMedia
                 className={classes.cardMedia}
@@ -56,14 +60,12 @@ export default function Album({cards}) {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small" color="primary">
-                  View
-                </Button>
-                <Button size="small" color="primary">
-                  Edit
-                </Button>
+                <Typography>
+                  {card.website_link}
+                </Typography>
               </CardActions>
             </Card>
+            </Link>
           </Grid>
         ))}
       </Grid>
