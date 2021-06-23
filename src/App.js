@@ -30,6 +30,8 @@ const dealersAlphaReverse = dealersAlpha.slice();
 dealersAlphaReverse.reverse();
 
 const fuseOptions = {
+  threshold: 0.3,
+  ignoreLocation: true,
   keys: ['display_name'],
 };
 const fuse = new Fuse(data, fuseOptions);
