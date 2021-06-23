@@ -123,7 +123,7 @@ const App = () => {
       {/* Footer */}
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-          AC Online 2021 Dealers
+          AnthrocOnline™ 2021 Dealers
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
           Created by Draggor
