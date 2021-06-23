@@ -17,6 +17,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
+import ResponsiveEmbed from 'react-responsive-embed';
 import Fuse from 'fuse.js';
 import shuffle from 'knuth-shuffle-seeded';
 
@@ -63,6 +64,18 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
+  },
+  card: {
+    height: '100%',
+    maxHeight: '360px',
+    maxWidth: '720px',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  cardMedia: {
+    height: '100%',
+    maxHeight: '360px',
+    maxWidth: '720px',
   },
 }));
 
@@ -115,16 +128,16 @@ const App = () => {
         </Toolbar>
       </AppBar>
       <main>
-        <Box align="center" p={4}>
-          <iframe
+        <div style={{maxWidth: '720px', margin: '0 auto'}}>
+          <ResponsiveEmbed
             src="https://firr.cam/embed/video"
             title="Anthrocn Artist Alley"
-            height="360px" width="640px"
+            frameBorder="0"
             referrerPolicy="origin"
             scrolling="no"
             allowFullScreen>
-          </iframe>
-        </Box>
+          </ResponsiveEmbed>
+        </div>
         <Box align="center" p={4}>
           <TextField label="Search Dealers" value={searchText} onChange={handleSearch} />
           <Button variant="contained" color="primary" onClick={sortAlpha}>A-Z</Button>
