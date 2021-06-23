@@ -108,7 +108,7 @@ const App = () => {
         <Toolbar>
           <CameraIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
-            Anthrocon Online 2021 Dealers
+            AnthrocOnline™ 2021 Dealers
           </Typography>
         </Toolbar>
       </AppBar>
