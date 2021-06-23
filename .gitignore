@@ -1,6 +1,5 @@
 *.swp
 .cache
 dist
-data
 node_modules
 tmp
