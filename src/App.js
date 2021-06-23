@@ -116,6 +116,16 @@ const App = () => {
       </AppBar>
       <main>
         <Box align="center" p={4}>
+          <iframe
+            src="https://firr.cam/embed/video"
+            title="Anthrocn Artist Alley"
+            height="360px" width="640px"
+            referrerPolicy="origin"
+            scrolling="no"
+            allowFullScreen>
+          </iframe>
+        </Box>
+        <Box align="center" p={4}>
           <TextField label="Search Dealers" value={searchText} onChange={handleSearch} />
           <Button variant="contained" color="primary" onClick={sortAlpha}>A-Z</Button>
           <Button variant="contained" color="primary" onClick={sortAlphaReverse}>Z-A</Button>
