@@ -138,13 +138,17 @@ const App = () => {
             allowFullScreen>
           </ResponsiveEmbed>
         </div>
-        <Box align="center" p={4}>
-          <TextField label="Search Dealers" value={searchText} onChange={handleSearch} />
-          <Box align="center" p={2}>
-            <Button variant="contained" color="primary" onClick={sortAlpha}>A-Z</Button>
-            <Button variant="contained" color="primary" onClick={sortAlphaReverse}>Z-A</Button>
-          </Box>
-        </Box>
+        <Grid container justify="center" spacing={4}>
+          <Grid item>
+            <TextField label="Search Dealers" value={searchText} onChange={handleSearch} />
+          </Grid>
+          <Grid item>
+            <Box align="center" p={2}>
+              <Button variant="contained" color="primary" onClick={sortAlpha}>A-Z</Button>
+              <Button variant="contained" color="primary" onClick={sortAlphaReverse}>Z-A</Button>
+            </Box>
+          </Grid>
+        </Grid>
         <Album cards={dealers} />
       </main>
       {/* Footer */}
