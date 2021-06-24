@@ -17,6 +17,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
+import Loop from '@material-ui/icons/Loop';
+
 import ResponsiveEmbed from 'react-responsive-embed';
 import Fuse from 'fuse.js';
 import shuffle from 'knuth-shuffle-seeded';
@@ -79,13 +81,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const getRandomDealers = (dealers) => {
-  const keys = Object.keys(dealers);
-  shuffle(keys);
-  return keys.map(key => dealers[key]);
-};
-
-//const randomDealers = getRandomDealers(data);
 const randomDealers = data.slice();
 shuffle(randomDealers);
 
@@ -114,6 +109,10 @@ const App = () => {
   };
   const sortAlphaReverse = () => {
     setDealers(dealersAlphaReverse);
+  };
+  const sortRandom = () => {
+    shuffle(randomDealers);
+    setDealers(randomDealers);
   };
 
   return (
@@ -146,6 +145,9 @@ const App = () => {
             <Box align="center" p={2}>
               <Button variant="contained" color="primary" onClick={sortAlpha}>A-Z</Button>
               <Button variant="contained" color="primary" onClick={sortAlphaReverse}>Z-A</Button>
+              <Button variant="contained" color="primary" onClick={sortRandom}>
+                <Loop />
+              </Button>
             </Box>
           </Grid>
         </Grid>
