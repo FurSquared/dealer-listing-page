@@ -140,8 +140,10 @@ const App = () => {
         </div>
         <Box align="center" p={4}>
           <TextField label="Search Dealers" value={searchText} onChange={handleSearch} />
-          <Button variant="contained" color="primary" onClick={sortAlpha}>A-Z</Button>
-          <Button variant="contained" color="primary" onClick={sortAlphaReverse}>Z-A</Button>
+          <Box align="center" p={2}>
+            <Button variant="contained" color="primary" onClick={sortAlpha}>A-Z</Button>
+            <Button variant="contained" color="primary" onClick={sortAlphaReverse}>Z-A</Button>
+          </Box>
         </Box>
         <Album cards={dealers} />
       </main>
