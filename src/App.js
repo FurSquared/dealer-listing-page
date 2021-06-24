@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const randomDealers = data.slice();
+let randomDealers = data.slice();
 shuffle(randomDealers);
 
 const App = () => {
@@ -111,6 +111,7 @@ const App = () => {
     setDealers(dealersAlphaReverse);
   };
   const sortRandom = () => {
+    randomDealers = data.slice();
     shuffle(randomDealers);
     setDealers(randomDealers);
   };
