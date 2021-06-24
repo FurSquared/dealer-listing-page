@@ -17,6 +17,7 @@ import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
+    paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(8),
   },
   card: {

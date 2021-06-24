@@ -128,7 +128,7 @@ const App = () => {
         </Toolbar>
       </AppBar>
       <main>
-        <div style={{maxWidth: '720px', margin: '0 auto'}}>
+        <div style={{maxWidth: '720px', margin: '0 auto', paddingBottom: 16}}>
           <ResponsiveEmbed
             src="https://firr.cam/embed/video"
             title="Anthrocn Artist Alley"
@@ -138,7 +138,7 @@ const App = () => {
             allowFullScreen>
           </ResponsiveEmbed>
         </div>
-        <Grid container justify="center" spacing={4}>
+        <Grid container justify="center" maxWidth="xl">
           <Grid item>
             <TextField label="Search Dealers" value={searchText} onChange={handleSearch} />
           </Grid>
