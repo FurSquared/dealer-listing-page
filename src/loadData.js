@@ -7,12 +7,15 @@ const dealersAlphaReverse = dealersAlpha.slice();
 dealersAlphaReverse.reverse();
 
 const tagsReducer = (accumulator, current) => {
-  current.tags.forEach(tag => accumulator.add(tag));
+  current.tags.forEach(tag => {
+    accumulator[tag] = accumulator[tag] || 0;
+    accumulator[tag] += 1;
+  });
 
   return accumulator;
 };
 
-const tags = Array.from(data.reduce(tagsReducer, new Set()));
+const tags = Object.entries(data.reduce(tagsReducer, {})).map(([name, count]) => `${name} (${count})`);
 tags.sort();
 
 export {
