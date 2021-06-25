@@ -115,7 +115,7 @@ const App = () => {
     setSearchText('');
   };
   const filterTag = (tag) => {
-    if (tag.length > 0) {
+    if (tag !== '_') {
       const filteredDealers = dealersAlpha.slice().filter(dealer => dealer.tags.indexOf(tag) > -1);
       setDealers(filteredDealers);
     } else {

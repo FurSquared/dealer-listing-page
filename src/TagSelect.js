@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 
 const TagSelect = ({tags, onChange}) => {
   const classes = useStyles();
-  const [selectedTag, setTag] = useState('');
+  const [selectedTag, setTag] = useState('_');
   const handleChange = (event) => {
     setTag(event.target.value);
     onChange(event.target.value);
@@ -29,7 +29,7 @@ const TagSelect = ({tags, onChange}) => {
         value={selectedTag}
         variant="filled"
       >
-        <option aria-label="None" value="" />
+        <option aria-label="None" value="_">Show All</option>
         {tags.map(tag => (
           <option key={tag.value} value={tag.value}>{tag.displayName}</option>
         ))}
