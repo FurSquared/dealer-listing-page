@@ -15,8 +15,11 @@ const tagsReducer = (accumulator, current) => {
   return accumulator;
 };
 
-const tags = Object.entries(data.reduce(tagsReducer, {})).map(([name, count]) => `${name} (${count})`);
-tags.sort();
+const tags = Object.entries(data.reduce(tagsReducer, {})).map(([name, count]) => ({
+  value: name,
+  displayName: `${name} (${count})`,
+}));
+tags.sort((a, b) => a.value.localeCompare(b.value));
 
 export {
   data,

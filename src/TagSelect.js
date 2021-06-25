@@ -31,7 +31,7 @@ const TagSelect = ({tags, onChange}) => {
       >
         <option aria-label="None" value="" />
         {tags.map(tag => (
-          <option key={tag} value={tag}>{tag}</option>
+          <option key={tag.value} value={tag.value}>{tag.displayName}</option>
         ))}
       </NativeSelect>
     </FormControl>
