@@ -24,13 +24,9 @@ import Fuse from 'fuse.js';
 import shuffle from 'knuth-shuffle-seeded';
 
 import Album from './Album';
-import data from './data';
+import TagSelect from './TagSelect';
+import {data, dealersAlpha, dealersAlphaReverse, tags} from './loadData';
 
-
-const dealersAlpha = data.slice();
-dealersAlpha.sort((a, b) => a.display_name.toLowerCase().localeCompare(b.display_name.toLowerCase()));
-const dealersAlphaReverse = dealersAlpha.slice();
-dealersAlphaReverse.reverse();
 
 const fuseOptions = {
   threshold: 0.3,
@@ -106,14 +102,26 @@ const App = () => {
 
   const sortAlpha = () => {
     setDealers(dealersAlpha);
+    setSearchText('');
   };
   const sortAlphaReverse = () => {
     setDealers(dealersAlphaReverse);
+    setSearchText('');
   };
   const sortRandom = () => {
     randomDealers = data.slice();
     shuffle(randomDealers);
     setDealers(randomDealers);
+    setSearchText('');
+  };
+  const filterTag = (tag) => {
+    if (tag.length > 0) {
+      const filteredDealers = dealersAlpha.slice().filter(dealer => dealer.tags.indexOf(tag) > -1);
+      setDealers(filteredDealers);
+    } else {
+      setDealers(randomDealers);
+    }
+    setSearchText('');
   };
 
   return (
@@ -138,7 +146,7 @@ const App = () => {
             allowFullScreen>
           </ResponsiveEmbed>
         </div>
-        <Grid container justify="center" maxWidth="xl">
+        <Grid container justify="center" maxwidth="xl">
           <Grid item>
             <TextField label="Search Dealers" value={searchText} onChange={handleSearch} />
           </Grid>
@@ -150,6 +158,9 @@ const App = () => {
                 <Loop />
               </Button>
             </Box>
+          </Grid>
+          <Grid item>
+            <TagSelect tags={tags} onChange={filterTag} />
           </Grid>
         </Grid>
         <Album cards={dealers} />
