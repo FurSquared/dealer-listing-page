@@ -12,11 +12,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const TagSelect = ({tags, onChange}) => {
+const TagSelect = ({tags, onChange, value}) => {
   const classes = useStyles();
-  const [selectedTag, setTag] = useState('_');
   const handleChange = (event) => {
-    setTag(event.target.value);
     onChange(event.target.value);
   };
 
@@ -26,7 +24,7 @@ const TagSelect = ({tags, onChange}) => {
       <NativeSelect
         id="tag-select"
         onChange={handleChange}
-        value={selectedTag}
+        value={value}
         variant="filled"
       >
         <option aria-label="None" value="_">Show All</option>

@@ -85,6 +85,7 @@ const App = () => {
 
   const [dealers, setDealers] = useState(randomDealers);
   const [searchText, setSearchText] = useState('');
+  const [selectedTag, setTag] = useState('_');
 
   const handleSearch = (event) => {
     const str = event.target.value;
@@ -103,16 +104,19 @@ const App = () => {
   const sortAlpha = () => {
     setDealers(dealersAlpha);
     setSearchText('');
+    setTag('_');
   };
   const sortAlphaReverse = () => {
     setDealers(dealersAlphaReverse);
     setSearchText('');
+    setTag('_');
   };
   const sortRandom = () => {
     randomDealers = data.slice();
     shuffle(randomDealers);
     setDealers(randomDealers);
     setSearchText('');
+    setTag('_');
   };
   const filterTag = (tag) => {
     if (tag !== '_') {
@@ -121,6 +125,7 @@ const App = () => {
     } else {
       setDealers(randomDealers);
     }
+    setTag(tag);
     setSearchText('');
   };
 
@@ -160,7 +165,7 @@ const App = () => {
             </Box>
           </Grid>
           <Grid item>
-            <TagSelect tags={tags} onChange={filterTag} />
+            <TagSelect tags={tags} onChange={filterTag} value={selectedTag} />
           </Grid>
         </Grid>
         <Album cards={dealers} />
