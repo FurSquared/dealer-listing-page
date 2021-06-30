@@ -63,6 +63,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
   },
+  button: {
+    marginRight: theme.spacing(2),
+  },
   card: {
     height: '100%',
     maxHeight: '360px',
@@ -74,6 +77,9 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     maxHeight: '360px',
     maxWidth: '720px',
+  },
+  search: {
+    backgroundColor: theme.palette.background.default,
   },
 }));
 
@@ -153,12 +159,12 @@ const App = () => {
         </div>
         <Grid container justify="center" maxwidth="xl">
           <Grid item>
-            <TextField label="Search Dealers" value={searchText} onChange={handleSearch} />
+            <TextField label="Search Dealers" variant="filled" value={searchText} onChange={handleSearch} className={classes.search} />
           </Grid>
           <Grid item>
             <Box align="center" p={2}>
-              <Button variant="contained" color="primary" onClick={sortAlpha}>A-Z</Button>
-              <Button variant="contained" color="primary" onClick={sortAlphaReverse}>Z-A</Button>
+              <Button variant="contained" color="primary" onClick={sortAlpha} className={classes.button}>A-Z</Button>
+              <Button variant="contained" color="primary" onClick={sortAlphaReverse} className={classes.button}>Z-A</Button>
               <Button variant="contained" color="primary" onClick={sortRandom}>
                 <Loop />
               </Button>

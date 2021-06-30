@@ -3,12 +3,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import NativeSelect from '@material-ui/core/NativeSelect';
+import Select from '@material-ui/core/Select';
 
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
-    margin: theme.spacing(1),
     minWidth: 120,
+    backgroundColor: theme.palette.background.default,
   },
 }));
 
@@ -19,19 +20,19 @@ const TagSelect = ({tags, onChange, value}) => {
   };
 
   return (
-    <FormControl className={classes.formContrl}>
+    <FormControl variant="filled" className={classes.formControl}>
       <InputLabel htmlFor="tag-select">Category</InputLabel>
-      <NativeSelect
+      <Select
+        native
         id="tag-select"
         onChange={handleChange}
         value={value}
-        variant="filled"
       >
         <option aria-label="None" value="_">Show All</option>
         {tags.map(tag => (
           <option key={tag.value} value={tag.value}>{tag.displayName}</option>
         ))}
-      </NativeSelect>
+      </Select>
     </FormControl>
   );
 };
