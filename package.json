@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "npm run make-data && react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run make-data && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "make-data": "node scripts/make-data.js",
