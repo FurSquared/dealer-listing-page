@@ -169,7 +169,7 @@ const App = () => {
       {/* Footer */}
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-          Anthrocon Online 2021 Dealers
+          Fur Squared 2024 Dealers
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
           Created by Draggor
