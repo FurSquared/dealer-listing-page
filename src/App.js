@@ -142,21 +142,11 @@ const App = () => {
         <Toolbar>
           <CameraIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
-            Anthrocon Online 2021 Dealers
+            Fur Squared 2024 Dealers
           </Typography>
         </Toolbar>
       </AppBar>
       <main>
-        <div style={{maxWidth: '720px', margin: '0 auto', paddingBottom: 16}}>
-          <ResponsiveEmbed
-            src="https://firr.cam/embed/video"
-            title="Anthrocn Artist Alley"
-            frameBorder="0"
-            referrerPolicy="origin"
-            scrolling="no"
-            allowFullScreen>
-          </ResponsiveEmbed>
-        </div>
         <Grid container justify="center" maxwidth="xl">
           <Grid item>
             <TextField label="Search Dealers" variant="filled" value={searchText} onChange={handleSearch} className={classes.search} />
