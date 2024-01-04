@@ -1,6 +1,0 @@
-[phases.build]
-cmds = [
-'npm install -g npm@latest',
-'npm ci',
-'NODE_OPTIONS=--openssl-legacy-provider npm run build',
-]
