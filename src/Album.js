@@ -1,5 +1,6 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
+import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Card from '@material-ui/core/Card';
@@ -52,9 +53,14 @@ export default function Album({cards}) {
                 title={card.display_name}
               />
               <CardContent className={classes.cardContent}>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography gutterBottom variant="h4" component="h2">
                   {card.display_name}
                 </Typography>
+                <Box mb={'8px'}>
+                    <Typography variant="h6">
+                      Location: {card.location}
+                    </Typography>
+                </Box>
                 <Typography>
                   {card.short_description}
                 </Typography>
