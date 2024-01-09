@@ -89,9 +89,20 @@ shuffle(randomDealers);
 const App = () => {
   const classes = useStyles();
 
-  const [dealers, setDealers] = useState(randomDealers);
+  // Initialize list with tag from query param:
+  const searchParams = new URLSearchParams(document.location.search);
+  const searchTag = searchParams.get('tag');
+  const tag = tags.find(t => searchTag === t.value);
+  let initialDealers = randomDealers;
+  let initialTag = '_';
+  if (tag) {
+    initialDealers = dealersAlpha.slice().filter(dealer => dealer.tags.indexOf(searchTag) > -1);
+    initialTag = searchTag;
+  }
+
+  const [dealers, setDealers] = useState(initialDealers);
   const [searchText, setSearchText] = useState('');
-  const [selectedTag, setTag] = useState('_');
+  const [selectedTag, setTag] = useState(initialTag);
 
   const handleSearch = (event) => {
     const str = event.target.value;
@@ -134,6 +145,7 @@ const App = () => {
     setTag(tag);
     setSearchText('');
   };
+
 
   return (
     <>
