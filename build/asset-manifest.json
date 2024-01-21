@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/static/js/main.8aa44d78.chunk.js",
-    "main.js.map": "/static/js/main.8aa44d78.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.aa2cb02f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.aa2cb02f.js.map",
-    "static/js/2.5f8b7833.chunk.js": "/static/js/2.5f8b7833.chunk.js",
-    "static/js/2.5f8b7833.chunk.js.map": "/static/js/2.5f8b7833.chunk.js.map",
-    "index.html": "/index.html",
-    "static/js/2.5f8b7833.chunk.js.LICENSE.txt": "/static/js/2.5f8b7833.chunk.js.LICENSE.txt"
+    "main.js": "https://dealer-dev.netlify.app/static/js/main.4a90161c.chunk.js",
+    "main.js.map": "https://dealer-dev.netlify.app/static/js/main.4a90161c.chunk.js.map",
+    "runtime-main.js": "https://dealer-dev.netlify.app/static/js/runtime-main.dc45c7b2.js",
+    "runtime-main.js.map": "https://dealer-dev.netlify.app/static/js/runtime-main.dc45c7b2.js.map",
+    "static/js/2.5f8b7833.chunk.js": "https://dealer-dev.netlify.app/static/js/2.5f8b7833.chunk.js",
+    "static/js/2.5f8b7833.chunk.js.map": "https://dealer-dev.netlify.app/static/js/2.5f8b7833.chunk.js.map",
+    "index.html": "https://dealer-dev.netlify.app/index.html",
+    "static/js/2.5f8b7833.chunk.js.LICENSE.txt": "https://dealer-dev.netlify.app/static/js/2.5f8b7833.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.aa2cb02f.js",
+    "static/js/runtime-main.dc45c7b2.js",
     "static/js/2.5f8b7833.chunk.js",
-    "static/js/main.8aa44d78.chunk.js"
+    "static/js/main.4a90161c.chunk.js"
   ]
 }
