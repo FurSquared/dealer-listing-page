@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "https://dealers.fursquared.com/static/js/main.ebcf7059.chunk.js",
-    "main.js.map": "https://dealers.fursquared.com/static/js/main.ebcf7059.chunk.js.map",
+    "main.js": "https://dealers.fursquared.com/static/js/main.fa467ddb.chunk.js",
+    "main.js.map": "https://dealers.fursquared.com/static/js/main.fa467ddb.chunk.js.map",
     "runtime-main.js": "https://dealers.fursquared.com/static/js/runtime-main.6e1efa1c.js",
     "runtime-main.js.map": "https://dealers.fursquared.com/static/js/runtime-main.6e1efa1c.js.map",
     "static/js/2.5f8b7833.chunk.js": "https://dealers.fursquared.com/static/js/2.5f8b7833.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.6e1efa1c.js",
     "static/js/2.5f8b7833.chunk.js",
-    "static/js/main.ebcf7059.chunk.js"
+    "static/js/main.fa467ddb.chunk.js"
   ]
 }
