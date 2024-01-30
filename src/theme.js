@@ -14,7 +14,7 @@ const theme = createMuiTheme({
       main: red.A400,
     },
     background: {
-      default: '#fff',
+      default: '#eee0c3',
     },
     action: {
       hover: '#fdb515',
